@@ -42,7 +42,8 @@ pip install numpy opencv-python
 Make sure to replace finding.jpg and 1.jpg with your own images.
 
 ## 🖼️ Sample Result
-![result](output.png)
+![result1](output1.png)
+![result2](output2.png)
 
 ## 🔥 Why This Project Stands Out
 
