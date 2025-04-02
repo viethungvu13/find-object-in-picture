@@ -49,8 +49,8 @@ Make sure to replace finding.jpg and 1.jpg with your own images.
     <th>Result_2</th>
   </tr>
   <tr>
-    <td><img src="output1.png" width="300"></td>
-    <td><img src="output2.png" width="300"></td>
+    <td><img src="output1.png" width="100"></td>
+    <td><img src="output2.png" width="100"></td>
   </tr>
 </table>
 
