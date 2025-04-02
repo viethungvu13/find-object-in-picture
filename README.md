@@ -42,17 +42,7 @@ pip install numpy opencv-python
 Make sure to replace finding.jpg and 1.jpg with your own images.
 
 ## 🖼️ Sample Result
-
-<table>
-  <tr>
-    <th>Result_1</th>
-    <th>Result_2</th>
-  </tr>
-  <tr>
-    <td><img src="output1.png" width="100"></td>
-    <td><img src="output2.png" width="100"></td>
-  </tr>
-</table>
+![result1](output1.png)
 
 ## 🔥 Why This Project Stands Out
 
