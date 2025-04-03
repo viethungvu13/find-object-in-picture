@@ -1,47 +1,44 @@
-# Object Detection in Images (Shape-based Approach)
+# Object Detection Using Shape-based Matching
 
-## 📌 Project Overview
-This project implements an object detection system using image processing techniques, without relying on built-in functions, pre-trained models, or deep learning. The goal is to locate objects within an image based solely on their shape characteristics.
+## Overview
+This project performs object detection using shape-based template matching in images. The approach involves preprocessing the images, extracting edges, identifying object contours, and matching templates using OpenCV functions. The process does not rely on deep learning but rather traditional computer vision techniques.
 
-## 🎯 Features
-- Custom Morphological Operations: Implemented dilation and erosion from scratch.
-
-- Edge Detection: Used the Sobel operator to detect edges.
-
-- Template Matching: Developed a correlation-based template matching algorithm.
-
-- No Pre-built Functions: Avoided OpenCV's high-level functions such as cv2.Canny, cv2.matchTemplate, and cv2.morphologyEx.
-
-## 🏗️ Implementation
-### 1. Preprocessing
-- Convert the input image to grayscale.
-
-- Apply binary thresholding to segment objects.
-
-### 2. Morphological Processing
-- Dilation: Expands object boundaries to close small gaps.
-
-- Erosion: Removes noise and refines object shapes.
-
-### 3. Edge Detection
-- Implemented Sobel filters to detect object edges manually.
-
-### 4. Template Matching
-- The sliding window technique scans the image.
-
-- Computes correlation scores to detect object locations.
-
-## 🚀 How to Run
-### Prerequisites
-Ensure you have Python and OpenCV installed:
+## Requirements
+Ensure you have the following dependencies installed before running the code:
 ```bash
-pip install numpy opencv-python
+pip install opencv-python numpy matplotlib
 ```
 
-### Run the Code in main.ipynb
-Make sure to replace finding.jpg and 1.jpg with your own images.
+## Workflow
+### 1. Load and Preprocess Images
+- Read the input image (`finding.jpg`) and convert it to RGB format.
+- Split the image into two parts: the main image and the template.
+- Convert both parts to grayscale and apply Gaussian blur.
+- Perform edge detection using Canny edge detector.
 
-## 🖼️ Sample Result
+### 2. Save Processed Images
+- Save the main and template images to the `analyst/` directory.
+- Convert the template image to binary format and extract contours.
+
+### 3. Extract Objects from Template
+- Find contours of objects in the template image.
+- Extract object bounding boxes and save them in the `extracted_objects/` directory.
+
+### 4. Template Matching
+- Iterate through different scale values and apply template matching.
+- Identify the best location and scale factor for the match.
+- Draw a bounding box around the detected object in the main image.
+
+## Running the Code
+1. Ensure all images are present in the working directory.
+
+2. Run the script in a Jupyter Notebook or as a standalone Python script.
+
+3. The extracted objects will be saved in `extracted_objects/`.
+
+4. The final detection result will be displayed using Matplotlib.
+
+## Expected Output
 
 <table>
   <tr>
@@ -53,31 +50,3 @@ Make sure to replace finding.jpg and 1.jpg with your own images.
     <td><img src="output_2.png" width="300"></td>
   </tr>
 </table>
-
-## 🔥 Why This Project Stands Out
-
-- ✅ Manual implementation of image processing techniques 📸
-- ✅ No deep learning, just pure computer vision logic 🧠
-- ✅ Optimized and well-structured code ⚡
-- ✅ Industry-relevant, demonstrating problem-solving skills 💼
-
-## 🛠️ Technologies Used
-- Python
-
-- OpenCV (for basic I/O operations) 
-
-- NumPy     
-
-## 📌 Future Improvements
-
-- Enhance rotation & scale invariance for template matching.
-
-- Implement more robust noise removal techniques.
-
-- Expand to multi-object detection with multiple templates.
-
-## 🤝 Contact
-
-- **Email:** [hungvv109@gmail.com](mailto:hungvv109@gmail.com)
-- **LinkedIn:** [Hung Vu](https://www.linkedin.com/in/hung-vu-70b472282/?originalSubdomain=vn)
-
